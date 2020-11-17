@@ -1,0 +1,30 @@
+&input2
+IDRUN = 20
+INDX = 9, INDY = 3, INORDER = 1
+NPX = 1, NPY = 1
+YEE = 0
+PARMAX = 0
+MZF = 1 
+VPML = 20, XTRUE = 1, YTRUE = 0
+POPT = 5, DOPT = 1, DJOPT = 1
+TEND = 40.08, DT = 0.08, CI = 0.2
+AX = 0.0, AY = 0.0
+NTEME1 = 0, NTEME2 = 0, NTEME3 = 10
+LAUNCHLAS = 1, launchtype = 1, laspol = 3, launchshape = 1, lase0 = 1.0
+               lasstart = 326, lasend = 487, lask = 0.196349540849362
+               launchdir = 1
+VTX =   0.00, VTY = 0.00, VTZ = 0.00
+VX0 = 0.00, VY0 = 0.00, VZ0 = 0.0
+QME = -0.0
+RELATIVITY = 1
+SORTIME = 0
+MOVION = 1
+/
+&ions2
+   RMASS = 1836.1527
+   RTEMPXI =   1.0000000, RTEMPYI =   1.00000000, RTEMPZI =   1.00000000
+   VXI0 =  0.0, VYI0 = 0.00, VZI0 = 0.00   
+   NPXI = 1, NPYI = 1
+   SORTIMI = 0
+   QMI = 0.0
+/
