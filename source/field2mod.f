@@ -1445,17 +1445,25 @@
       &smoothmask)
 ! initialize 2d periodic electric field solver
          implicit none
-         integer :: nx, ny, smoothtype
-         real :: ax, ay, affp, smoothfactor, smoothmask
+         integer :: nx, ny
+         integer, optional :: smoothtype
+         real :: ax, ay, affp 
+         real, optional :: smoothfactor, smoothmask
          complex, dimension(:,:), pointer :: ffc
 ! local data
          integer :: isign = 0, nxvh = 1, nyv = 1, nxhd, nyhd
+         integer loc_smoothtype
          real :: we, q, fxy
          nxhd = size(ffc,1); nyhd = size(ffc,2)
-         if (smoothtype == 1) then
+         if (present(smoothtype)) then
+             loc_smoothtype = smoothtype
+         else
+             loc_smoothtype = 1
+         endif
+         if (loc_smoothtype == 1) then
             call POIS22(q,fxy,isign,ffc,ax,ay,affp,we,nx,ny,nxvh,nyv,nxhd,n&
      &yhd)
-         elseif (smoothtype == 2) then
+         elseif (loc_smoothtype == 2) then
             call POIS22cf(q,fxy,isign,ffc,ax,ay,affp,we,nx,ny,nxvh,nyv,nxhd,n&
      &yhd,smoothfactor,smoothmask)
          else
@@ -1466,7 +1474,8 @@
          subroutine ipois22(q,fxy,ffc,we,tfield,nx,ny,inorder,yee)
 ! poisson solver for periodic 2d electric field
          implicit none
-         integer :: nx, ny, yee
+         integer :: nx, ny
+         integer, optional :: yee
          integer, optional :: inorder
          real :: we, tfield
          real, dimension(:,:), pointer :: q
@@ -1499,7 +1508,8 @@
          subroutine ipois23(q,fxy,ffc,we,tfield,nx,ny,inorder,yee)
 ! poisson solver for periodic 2-1/2d electric field
          implicit none
-         integer :: nx, ny, yee
+         integer :: nx, ny
+         integer, optional :: yee
          integer, optional :: inorder
          real :: we, tfield
          real, dimension(:,:), pointer :: q

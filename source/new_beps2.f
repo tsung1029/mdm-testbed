@@ -189,7 +189,9 @@
          npxy1 = npxy + 1
 ! background electrons
          if (npxy > 0) then
-            call fdistr(part,1,npxy,ampdx,scaledx,shiftdx,ampdy,scaledy,&
+!23456789X123456789X123456789X123456789X123456789X123456789X123456789X
+            call fdistr(part,1,npxy,ampdx,scaledx,shiftdx,ampdy,&
+     &scaledy,&
      &shiftdy,npx,npy,nx,ny,ipbc,ndprof,nsrand)
             call vdistr(part,1,npxy,vtx,vty,vx0,vy0)
          endif

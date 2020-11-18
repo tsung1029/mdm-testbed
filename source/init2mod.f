@@ -326,7 +326,7 @@
 ! with various density profiles
          implicit none
          integer :: nstart, nop, npx, npy, nx, ny, ipbc, ndpro, nsran
-         integer :: typeindex
+         integer, optional :: typeindex
          real :: ampx, scalex, shiftx, ampy, scaley, shifty
          real, dimension(:,:), pointer :: part
 ! local data

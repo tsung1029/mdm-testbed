@@ -95,8 +95,8 @@ FC90 = gfortran
 FC77 = gfortran
 CC = gcc
 
-OPTS90 = -O3 -fdefault-real-8 -ffree-form -fbounds-check
-OPTS77 = -O3 -fdefault-real-8 -fbounds-check
+OPTS90 = -O3 -fdefault-real-8 -ffree-form -fbounds-check -std=legacy
+OPTS77 = -O3 -fdefault-real-8 -fbounds-check -std=legacy
 CCOPTS = -O
 MOPTS = -fno-automatic
 MBOPTS = -fno-automatic
