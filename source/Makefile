@@ -285,7 +285,9 @@ VPMLJS = vpml2mod.o
 
 all : basic
 
-basic : new_beps2 new_bbeps2_pei new_dbeps2 new_hdbeps2
+# Nov 2020 -> removed the pei version and start to use mdm
+# basic : new_beps2 new_bbeps2_pei new_dbeps2 new_hdbeps2 new_bbeps2_mdm
+basic : new_beps2 new_dbeps2 new_hdbeps2 new_bbeps2_mdm
 
 bounded : new_d0_beps2 new_d0_bbeps2 new_d0_dbeps2
 
